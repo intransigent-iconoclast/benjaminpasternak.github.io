@@ -24,7 +24,7 @@ const observer = new IntersectionObserver((entries) => {
 sections.forEach(s => observer.observe(s));
 
 // Fade-in on scroll
-const fadeEls = document.querySelectorAll('.timeline-item, .skill-group, .about-grid');
+const fadeEls = document.querySelectorAll('.timeline-item, .skill-group, .about-grid, .project-card');
 const fadeObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -32,9 +32,27 @@ const fadeObserver = new IntersectionObserver((entries) => {
       fadeObserver.unobserve(entry.target);
     }
   });
-}, { threshold: 0.1 });
+}, { threshold: 0.08 });
 
 fadeEls.forEach(el => {
   el.classList.add('fade-in');
   fadeObserver.observe(el);
 });
+
+// Email obfuscation — assembles mailto at runtime so it doesn't sit as
+// plain text in the HTML for bots to harvest
+(function () {
+  const u = 'benjamin.pasternak';
+  const d = 'rutgers.edu';
+  const addr = u + '@' + d;
+  const mailto = 'mailto:' + addr;
+
+  const btn = document.getElementById('contact-btn');
+  if (btn) btn.href = mailto;
+
+  const emailLink = document.getElementById('email-link');
+  if (emailLink) {
+    emailLink.href = mailto;
+    emailLink.textContent = '✉ ' + addr;
+  }
+})();

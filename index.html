@@ -17,6 +17,7 @@
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -27,12 +28,12 @@
     <div class="hero-inner">
       <p class="hero-eyebrow">Hi, I'm</p>
       <h1 class="hero-name">Benjamin Pasternak</h1>
-      <p class="hero-tagline"><!-- Edit this: one-line description of what you do -->
-        Software engineer &amp; builder.
+      <p class="hero-tagline">
+        Cloud Software Developer &amp; AI/ML Systems Engineer at Oracle
       </p>
       <div class="hero-cta">
         <a href="#contact" class="btn btn-primary">Get in touch</a>
-        <a href="#about" class="btn btn-ghost">Learn more</a>
+        <a href="#projects" class="btn btn-ghost">See my work</a>
       </div>
     </div>
   </section>
@@ -43,20 +44,30 @@
       <h2 class="section-title">About</h2>
       <div class="about-grid">
         <div class="about-text">
-          <!-- Edit this block with your actual bio -->
           <p>
-            I'm a software engineer with a passion for building things that matter.
-            I care deeply about clean code, thoughtful product decisions, and shipping work I'm proud of.
+            I'm a software engineer at Oracle working on enterprise AI and cloud infrastructure.
+            Right now I'm on the AI Services team, building agentic systems, RAG pipelines, and
+            the platform infrastructure that powers them — across multi-tenant OCI environments
+            at scale.
           </p>
           <p>
-            When I'm not at a keyboard you'll find me — <!-- add something personal here -->.
+            Before moving to AI, I spent a few years on Oracle's Shared Services team building
+            microservices and developer tooling used across 10+ global business units. I'm drawn
+            to problems that sit at the intersection of reliability, observability, and making
+            complex systems actually usable.
           </p>
+          <p>
+            B.S. in Computer Science (Minor in Cognitive Science) from Rutgers University.
+            Based in Tempe, AZ.
+          </p>
+          <div class="about-links">
+            <a href="#" class="about-link" id="email-link">✉ benjamin.pasternak@rutgers.edu</a>
+            <a href="https://linkedin.com/in/benjamin-pasternak" target="_blank" rel="noopener" class="about-link">↗ LinkedIn</a>
+            <a href="https://github.com/intransigent-iconoclast" target="_blank" rel="noopener" class="about-link">↗ GitHub</a>
+          </div>
         </div>
-        <div class="about-links">
-          <a href="mailto:your@email.com" class="about-link">✉ your@email.com</a>
-          <a href="https://linkedin.com/in/yourhandle" target="_blank" rel="noopener" class="about-link">↗ LinkedIn</a>
-          <a href="https://github.com/yourhandle" target="_blank" rel="noopener" class="about-link">↗ GitHub</a>
-          <!-- Add more links as needed -->
+        <div class="about-photo-wrap">
+          <img src="profile.jpg" alt="Benjamin Pasternak" class="about-photo" />
         </div>
       </div>
     </div>
@@ -68,43 +79,54 @@
       <h2 class="section-title">Experience</h2>
       <div class="timeline">
 
-        <!-- ENTRY — duplicate this block for each role -->
         <div class="timeline-item">
           <div class="timeline-meta">
-            <span class="timeline-date">2023 — Present</span>
-            <span class="timeline-company">Company Name</span>
+            <span class="timeline-date">Sep 2024 — Present</span>
+            <span class="timeline-company">Oracle</span>
           </div>
           <div class="timeline-body">
-            <h3 class="timeline-role">Your Role / Title</h3>
+            <h3 class="timeline-role">Cloud Software Developer</h3>
+            <p class="timeline-team">Data Intelligence Services · AI Services Team</p>
             <p class="timeline-desc">
-              Short description of what you did, what you built, what impact it had.
-              Keep it punchy — one or two sentences max.
+              Designing and deploying agentic AI systems on an enterprise GenAI platform —
+              RAG pipelines, vector memory, agent evaluation, and full-stack observability.
+              Building ML infrastructure for data ingestion, governance, and LLM orchestration
+              across multi-tenant OCI SaaS workloads, and engineering secure extensibility
+              patterns so customers can run custom agents across cloud environments.
             </p>
           </div>
         </div>
 
         <div class="timeline-item">
           <div class="timeline-meta">
-            <span class="timeline-date">2021 — 2023</span>
-            <span class="timeline-company">Previous Company</span>
+            <span class="timeline-date">Jan 2022 — Sep 2024</span>
+            <span class="timeline-company">Oracle</span>
           </div>
           <div class="timeline-body">
-            <h3 class="timeline-role">Previous Role</h3>
+            <h3 class="timeline-role">Application Developer</h3>
+            <p class="timeline-team">GBU Application Engineering Services · Shared Services</p>
             <p class="timeline-desc">
-              What you worked on and what you shipped.
+              Built and maintained shared microservices, frameworks, and developer tooling
+              used across 10+ Global Business Units. Automated deployments of microservice
+              architectures across dev, QA, and production on OCI with Docker, Kubernetes,
+              and Rancher. Drove performance and stress testing with JMeter, Prometheus,
+              and Grafana.
             </p>
           </div>
         </div>
 
         <div class="timeline-item">
           <div class="timeline-meta">
-            <span class="timeline-date">2019 — 2021</span>
-            <span class="timeline-company">Earlier Role</span>
+            <span class="timeline-date">Sep 2021 — Jan 2022</span>
+            <span class="timeline-company">AllSource / Merck</span>
           </div>
           <div class="timeline-body">
-            <h3 class="timeline-role">Role Title</h3>
+            <h3 class="timeline-role">Application Developer (Consultant)</h3>
             <p class="timeline-desc">
-              Brief summary of your work and contributions.
+              Maintained and hardened an existing codebase to meet production reliability
+              standards on AWS. Built Python tooling to make large, complex datasets
+              discoverable to scientists and researchers. Contributed to enterprise NLP
+              applications and collaborated on data models and matching algorithm logic.
             </p>
           </div>
         </div>
@@ -113,40 +135,262 @@
     </div>
   </section>
 
+  <!-- PROJECTS -->
+  <section class="section" id="projects">
+    <div class="container container-wide">
+      <h2 class="section-title">Projects</h2>
+
+      <p class="projects-intro">All work done at Oracle — no public repos, but happy to talk through any of it.</p>
+
+      <div class="projects-category">
+        <h3 class="projects-category-label">AI &amp; ML Systems</h3>
+        <div class="projects-grid">
+
+          <div class="project-card">
+            <div class="project-header">
+              <span class="project-name">DIF Agent</span>
+              <span class="project-date">Jan 2026 — Present</span>
+            </div>
+            <p class="project-desc">
+              The team's first industry-specific AI agent — combines document retrieval from
+              internal knowledge sources with live infrastructure API queries to deliver
+              context-aware self-service support. Architected the full system: context
+              persistence, multi-source selection, workflow orchestration, and REST API
+              contract. Leading a peer engineer through delivery.
+            </p>
+            <div class="project-tags">
+              <span class="tag">LangChain</span>
+              <span class="tag">LangGraph</span>
+              <span class="tag">RAG</span>
+              <span class="tag">OCI</span>
+              <span class="tag">REST API</span>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <span class="project-name">AI Reference Application</span>
+              <span class="project-date">Mar 2026</span>
+            </div>
+            <p class="project-desc">
+              End-to-end reference app demonstrating AI shared service capabilities to internal
+              Oracle customers. Architected a ReAct-style LangGraph agent on AIDP, querying
+              live customer data synced via GoldenGate CDC and enriched with OCI Dataflow
+              segments. Integrated Langfuse for observability. Shipped the full application
+              in one week while leading a junior engineer.
+            </p>
+            <div class="project-tags">
+              <span class="tag">LangGraph</span>
+              <span class="tag">ReAct</span>
+              <span class="tag">OCI Dataflow</span>
+              <span class="tag">GoldenGate</span>
+              <span class="tag">Langfuse</span>
+              <span class="tag">Python</span>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <span class="project-name">IAT Framework</span>
+              <span class="project-date">Jan 2025 — Mar 2025</span>
+            </div>
+            <p class="project-desc">
+              Integrated the Jishnu GenAI SDK into an IAT/LangGraph-style workflow, enabling
+              tools to plug in as composable lambda nodes for end-to-end agentic pipelines.
+              Covered retrieval, loading/splitting, and inference (chat, embeddings, vision)
+              with reliable checkpointing and serialization. ~90% test coverage; secured
+              owner approval to merge.
+            </p>
+            <div class="project-tags">
+              <span class="tag">LangGraph</span>
+              <span class="tag">RAG</span>
+              <span class="tag">OpenSearch</span>
+              <span class="tag">Python</span>
+              <span class="tag">GenAI SDK</span>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <span class="project-name">RAG Tracing</span>
+              <span class="project-date">Oct 2024 — Dec 2024</span>
+            </div>
+            <p class="project-desc">
+              Instrumented end-to-end tracing across the full RAG pipeline — retrieval,
+              reranking, embeddings, LLM calls, and orchestration — using
+              OpenTelemetry/OpenInference conventions, exporting into OCI APM. Enabled
+              component-level performance visibility and cut root-cause analysis time
+              significantly.
+            </p>
+            <div class="project-tags">
+              <span class="tag">OpenTelemetry</span>
+              <span class="tag">OpenInference</span>
+              <span class="tag">OCI APM</span>
+              <span class="tag">Observability</span>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <span class="project-name">Code Companion</span>
+              <span class="project-date">Nov 2024 — Apr 2025</span>
+            </div>
+            <p class="project-desc">
+              Prototype IntelliJ plugin integrating Oracle-hosted LLMs for AI-assisted code
+              generation and developer workflows. Built a Micronaut-based SSE streaming proxy
+              using Reactor to deliver real-time model responses to the IDE. Assisted
+              engineering OAuth2 compliance flows and payload verification.
+            </p>
+            <div class="project-tags">
+              <span class="tag">IntelliJ Platform</span>
+              <span class="tag">Micronaut</span>
+              <span class="tag">Reactor</span>
+              <span class="tag">SSE</span>
+              <span class="tag">OAuth2</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="projects-category">
+        <h3 class="projects-category-label">Platform &amp; Infrastructure</h3>
+        <div class="projects-grid">
+
+          <div class="project-card">
+            <div class="project-header">
+              <span class="project-name">Customer Deployment Information (CDI)</span>
+              <span class="project-date">Mar 2025 — Jan 2026</span>
+            </div>
+            <p class="project-desc">
+              Engineered 3 microservices to ingest and normalize customer records into OCI
+              Object Storage, enabling AI-driven ticketing and documentation workflows and
+              eliminating significant manual operational effort. Led 2 engineers end-to-end
+              across Jira sprint management, hands-on delivery, and production rollout across
+              7 environments. Coordinated across 5 teams and 3 stakeholders.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Java</span>
+              <span class="tag">Micronaut</span>
+              <span class="tag">Kubernetes</span>
+              <span class="tag">OCI</span>
+              <span class="tag">CI/CD</span>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <span class="project-name">OCIR Provisioner</span>
+              <span class="project-date">Oct 2022 — Dec 2022</span>
+            </div>
+            <p class="project-desc">
+              GitLab CI/CD pipeline using shell scripting, Kubernetes Jobs, and Docker to
+              automate OCI resource provisioning across dev, QA, integration, and production
+              — cutting manual setup time by 80%. Enabled full regression deployments across
+              all environments and integrated Prometheus and Grafana for real-time telemetry
+              across 10+ services.
+            </p>
+            <div class="project-tags">
+              <span class="tag">GitLab CI/CD</span>
+              <span class="tag">Bash</span>
+              <span class="tag">Kubernetes</span>
+              <span class="tag">Docker</span>
+              <span class="tag">Prometheus</span>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <span class="project-name">Logging Library</span>
+              <span class="project-date">Mar 2023 — May 2023</span>
+            </div>
+            <p class="project-desc">
+              Drop-in library enforcing OCI Logging-compliant log schema across 10+
+              microservices, enabling seamless metadata parsing and ingestion into Oracle's
+              central logging system. Cut mean time to detection by 60% and accelerated
+              incident resolution by 40% through enriched, structured logs.
+            </p>
+            <div class="project-tags">
+              <span class="tag">SLF4J</span>
+              <span class="tag">MDC</span>
+              <span class="tag">OCI Logging</span>
+              <span class="tag">Observability</span>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <span class="project-name">OCI Ingress Pattern</span>
+              <span class="project-date">Dec 2022 — Mar 2023</span>
+            </div>
+            <p class="project-desc">
+              Designed and rolled out a unified ingress architecture using OCI API Gateway,
+              Load Balancers, and NGINX serving 10+ internal and external services.
+              Centralized routing and configuration, enforced TLS policies, and automated
+              certificate rotation — improving compliance posture across the stack.
+            </p>
+            <div class="project-tags">
+              <span class="tag">OCI</span>
+              <span class="tag">API Gateway</span>
+              <span class="tag">NGINX</span>
+              <span class="tag">TLS</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
   <!-- SKILLS -->
-  <section class="section" id="skills">
+  <section class="section section-alt" id="skills">
     <div class="container">
       <h2 class="section-title">Skills</h2>
       <div class="skills-grid">
 
         <div class="skill-group">
+          <h3 class="skill-group-title">AI &amp; ML</h3>
+          <ul class="skill-list">
+            <li>LangChain / LangGraph</li>
+            <li>Agentic Systems</li>
+            <li>RAG Pipelines</li>
+            <li>LLM Orchestration</li>
+            <li>OpenTelemetry / OpenInference</li>
+            <li>Langfuse</li>
+          </ul>
+        </div>
+
+        <div class="skill-group">
           <h3 class="skill-group-title">Languages</h3>
           <ul class="skill-list">
-            <!-- Edit with your actual languages -->
+            <li>Java</li>
             <li>Python</li>
-            <li>TypeScript</li>
-            <li>JavaScript</li>
+            <li>Go</li>
+            <li>Bash</li>
             <li>SQL</li>
           </ul>
         </div>
 
         <div class="skill-group">
-          <h3 class="skill-group-title">Frameworks &amp; Tools</h3>
+          <h3 class="skill-group-title">Cloud &amp; Infrastructure</h3>
           <ul class="skill-list">
-            <li>React</li>
-            <li>Node.js</li>
-            <li>FastAPI</li>
-            <li>Docker</li>
+            <li>OCI · AWS · GCP</li>
+            <li>Kubernetes · Docker · Rancher</li>
+            <li>GitLab CI/CD · ArgoCD</li>
+            <li>Prometheus · Grafana · OCI APM</li>
+            <li>Ansible · Serverless</li>
           </ul>
         </div>
 
         <div class="skill-group">
-          <h3 class="skill-group-title">Platforms</h3>
+          <h3 class="skill-group-title">Frameworks &amp; Backend</h3>
           <ul class="skill-list">
-            <li>AWS</li>
-            <li>GitHub Actions</li>
-            <li>PostgreSQL</li>
-            <li>Redis</li>
+            <li>Micronaut · Spring Boot · Helidon</li>
+            <li>Reactor · RxJava</li>
+            <li>REST APIs · SSE Streaming</li>
+            <li>OAuth2 / SSO</li>
+            <li>PostgreSQL · OpenSearch · Oracle DB</li>
           </ul>
         </div>
 
@@ -155,19 +399,18 @@
   </section>
 
   <!-- CONTACT -->
-  <section class="section section-alt" id="contact">
+  <section class="section" id="contact">
     <div class="container container-narrow">
       <h2 class="section-title">Contact</h2>
       <p class="contact-intro">
-        Whether it's a job opportunity, collaboration, or just saying hi —
-        my inbox is open.
+        Open to interesting conversations — job opportunities, collaborations, or just
+        talking shop about AI systems and distributed infrastructure.
       </p>
-      <a href="mailto:your@email.com" class="btn btn-primary btn-large">Say hello →</a>
+      <a href="#" class="btn btn-primary btn-large" id="contact-btn">Say hello →</a>
       <div class="social-row">
-        <a href="https://linkedin.com/in/yourhandle" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://linkedin.com/in/benjamin-pasternak" target="_blank" rel="noopener">LinkedIn</a>
         <span class="social-divider">·</span>
-        <a href="https://github.com/yourhandle" target="_blank" rel="noopener">GitHub</a>
-        <!-- Add more as needed -->
+        <a href="https://github.com/intransigent-iconoclast" target="_blank" rel="noopener">GitHub</a>
       </div>
     </div>
   </section>
