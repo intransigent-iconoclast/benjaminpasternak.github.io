@@ -1,72 +1,115 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Benjamin Pasternak</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
   <!-- NAV -->
-  <nav class="nav">
-    <span class="nav-logo">BP</span>
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+  <header class="nav" id="nav">
+    <nav class="nav-inner">
+      <a href="#" class="nav-logo" id="nav-logo-btn">BP</a>
+      <ul class="nav-links">
+        <li><button class="nav-link" data-href="#about">About</button></li>
+        <li><button class="nav-link" data-href="#experience">Experience</button></li>
+        <li><button class="nav-link" data-href="#projects">Projects</button></li>
+        <li><button class="nav-link" data-href="#skills">Skills</button></li>
+        <li><button class="nav-link" data-href="#contact">Contact</button></li>
+      </ul>
+      <div class="nav-right">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu">
+          <svg class="icon-menu" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+          <svg class="icon-x" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+    </nav>
+    <div class="nav-mobile" id="nav-mobile">
+      <ul>
+        <li><button class="nav-link" data-href="#about">About</button></li>
+        <li><button class="nav-link" data-href="#experience">Experience</button></li>
+        <li><button class="nav-link" data-href="#projects">Projects</button></li>
+        <li><button class="nav-link" data-href="#skills">Skills</button></li>
+        <li><button class="nav-link" data-href="#contact">Contact</button></li>
+      </ul>
+    </div>
+  </header>
 
   <!-- HERO -->
   <section class="hero">
-    <div class="hero-inner">
-      <p class="hero-eyebrow">Hi, I'm</p>
-      <h1 class="hero-name">Benjamin Pasternak</h1>
-      <p class="hero-tagline">
-        Cloud Software Developer &amp; AI/ML Systems Engineer at Oracle
-      </p>
-      <div class="hero-cta">
-        <a href="#contact" class="btn btn-primary">Get in touch</a>
-        <a href="#projects" class="btn btn-ghost">See my work</a>
+    <div class="hero-bg-radial"></div>
+    <div class="hero-bg-grid"></div>
+    <div class="hero-content">
+      <div class="hero-photo-wrap fade-up" style="--delay:0s">
+        <img src="profile.jpeg" alt="Benjamin Pasternak" class="hero-photo"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+        <div class="hero-photo-fallback">BP</div>
       </div>
+      <h1 class="hero-name fade-up" style="--delay:0.15s">Benjamin Pasternak</h1>
+      <div class="hero-typing-wrap fade-up" style="--delay:0.3s">
+        <span class="hero-typing" id="hero-typing"></span><span class="hero-cursor"></span>
+      </div>
+      <p class="hero-tagline fade-up" style="--delay:0.45s">
+        Building enterprise AI systems and the cloud infrastructure that powers them.
+      </p>
+      <div class="hero-location fade-up" style="--delay:0.55s">
+        <span>📍</span><span>Tempe, AZ — Open to Remote</span>
+      </div>
+      <div class="hero-ctas fade-up" style="--delay:0.65s">
+        <button class="btn-primary" data-href="#experience">View My Work</button>
+        <button class="btn-ghost" data-href="#contact">Get In Touch</button>
+      </div>
+    </div>
+    <div class="hero-scroll-cue">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
     </div>
   </section>
 
   <!-- ABOUT -->
   <section class="section" id="about">
-    <div class="container">
-      <h2 class="section-title">About</h2>
-      <div class="about-grid">
-        <div class="about-text">
-          <p>
-            I'm a software engineer at Oracle working on enterprise AI and cloud infrastructure.
-            Right now I'm on the AI Services team, building agentic systems, RAG pipelines, and
-            the platform infrastructure that powers them — across multi-tenant OCI environments
-            at scale.
-          </p>
-          <p>
-            Before moving to AI, I spent a few years on Oracle's Shared Services team building
-            microservices and developer tooling used across 10+ global business units. I'm drawn
-            to problems that sit at the intersection of reliability, observability, and making
-            complex systems actually usable.
-          </p>
-          <p>
-            B.S. in Computer Science (Minor in Cognitive Science) from Rutgers University.
-            Based in Tempe, AZ.
-          </p>
-          <div class="about-links">
-            <a href="#" class="about-link" id="email-link">✉ benjamin.pasternak@rutgers.edu</a>
-            <a href="https://www.linkedin.com/in/benjamin-pasternak/" target="_blank" rel="noopener" class="about-link">↗ LinkedIn</a>
-          </div>
+    <div class="container-wide">
+      <div class="about-grid reveal">
+        <div class="about-photo-side">
+          <img src="profile.jpeg" alt="Benjamin Pasternak" class="about-photo"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+          <div class="about-photo-fallback">BP</div>
         </div>
-        <div class="about-photo-wrap">
-          <img src="profile.jpeg" alt="Benjamin Pasternak" class="about-photo" />
+        <div class="about-text-side">
+          <p class="section-eyebrow">About</p>
+          <h2 class="section-heading">Benjamin Pasternak</h2>
+          <p class="body-text">
+            Software engineer at Oracle working at the intersection of AI systems and cloud infrastructure.
+            Currently on the AI Services team, designing and shipping agentic systems, RAG pipelines,
+            and the platform infrastructure that runs them — across multi-tenant OCI environments at scale.
+          </p>
+          <p class="body-text" style="margin-top:12px">
+            Before moving to AI, I spent a few years on Oracle's Shared Services team building microservices
+            and developer tooling across global business units. I'm drawn to problems at the intersection
+            of reliability, observability, and making complex systems actually usable.
+          </p>
+          <div class="callout">
+            <p class="callout-label">Education</p>
+            <p class="callout-text">
+              B.S. in Computer Science, Minor in Cognitive Science — Rutgers University (GPA 3.54, Jan 2022).
+              The cognitive science side has proven more useful than expected when reasoning about how people
+              actually interact with AI systems.
+            </p>
+          </div>
+          <div class="about-links">
+            <a href="https://www.linkedin.com/in/benjamin-pasternak/" target="_blank" rel="noopener" class="about-link">
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              LinkedIn
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -75,58 +118,62 @@
   <!-- EXPERIENCE -->
   <section class="section section-alt" id="experience">
     <div class="container">
-      <h2 class="section-title">Experience</h2>
+      <p class="section-eyebrow reveal">Career</p>
+      <h2 class="section-heading reveal">Experience</h2>
       <div class="timeline">
+        <div class="timeline-line"></div>
 
-        <div class="timeline-item">
-          <div class="timeline-meta">
-            <span class="timeline-date">Sep 2024 — Present</span>
-            <span class="timeline-company">Oracle</span>
-          </div>
-          <div class="timeline-body">
-            <h3 class="timeline-role">Cloud Software Developer</h3>
-            <p class="timeline-team">Data Intelligence Services · AI Services Team</p>
-            <p class="timeline-desc">
-              Designing and deploying agentic AI systems on an enterprise GenAI platform —
-              RAG pipelines, vector memory, agent evaluation, and full-stack observability.
-              Building ML infrastructure for data ingestion, governance, and LLM orchestration
-              across multi-tenant OCI SaaS workloads, and engineering secure extensibility
-              patterns so customers can run custom agents across cloud environments.
-            </p>
+        <div class="timeline-item reveal">
+          <div class="timeline-dot timeline-dot--current"></div>
+          <div class="exp-card">
+            <div class="exp-card-header">
+              <div>
+                <h3 class="exp-role">Cloud Software Developer</h3>
+                <p class="exp-team">Oracle · Data Intelligence Services — AI Services Team</p>
+              </div>
+              <span class="exp-date">Sep 2024 — Present</span>
+            </div>
+            <ul class="exp-bullets">
+              <li>Designing and deploying agentic AI systems on an enterprise GenAI platform — RAG pipelines, vector memory, agent evaluation, and full-stack observability.</li>
+              <li>Building ML infrastructure for data ingestion, governance, and LLM orchestration across multi-tenant OCI SaaS workloads.</li>
+              <li>Engineering secure extensibility patterns enabling customers to deploy and operate custom agents across cloud environments.</li>
+            </ul>
           </div>
         </div>
 
-        <div class="timeline-item">
-          <div class="timeline-meta">
-            <span class="timeline-date">Jan 2022 — Sep 2024</span>
-            <span class="timeline-company">Oracle</span>
-          </div>
-          <div class="timeline-body">
-            <h3 class="timeline-role">Application Developer</h3>
-            <p class="timeline-team">GBU Application Engineering Services · Shared Services</p>
-            <p class="timeline-desc">
-              Built and maintained shared microservices, frameworks, and developer tooling
-              used across 10+ Global Business Units. Automated deployments of microservice
-              architectures across dev, QA, and production on OCI with Docker, Kubernetes,
-              and Rancher. Drove performance and stress testing with JMeter, Prometheus,
-              and Grafana.
-            </p>
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="exp-card">
+            <div class="exp-card-header">
+              <div>
+                <h3 class="exp-role">Application Developer</h3>
+                <p class="exp-team">Oracle · GBU Application Engineering — Shared Services</p>
+              </div>
+              <span class="exp-date">Jan 2022 — Sep 2024</span>
+            </div>
+            <ul class="exp-bullets">
+              <li>Built and maintained shared microservices and developer tooling used across Global Business Units.</li>
+              <li>Automated deployments of microservice architectures across dev, QA, and production on OCI with Docker, Kubernetes, and Rancher.</li>
+              <li>Drove performance and stress testing with JMeter, Prometheus, and Grafana.</li>
+            </ul>
           </div>
         </div>
 
-        <div class="timeline-item">
-          <div class="timeline-meta">
-            <span class="timeline-date">Sep 2021 — Jan 2022</span>
-            <span class="timeline-company">AllSource / Merck</span>
-          </div>
-          <div class="timeline-body">
-            <h3 class="timeline-role">Application Developer (Consultant)</h3>
-            <p class="timeline-desc">
-              Maintained and hardened an existing codebase to meet production reliability
-              standards on AWS. Built Python tooling to make large, complex datasets
-              discoverable to scientists and researchers. Contributed to enterprise NLP
-              applications and collaborated on data models and matching algorithm logic.
-            </p>
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="exp-card">
+            <div class="exp-card-header">
+              <div>
+                <h3 class="exp-role">Application Developer <span class="exp-consultant">(Consultant)</span></h3>
+                <p class="exp-team">AllSource · Consulting at Merck</p>
+              </div>
+              <span class="exp-date">Sep 2021 — Jan 2022</span>
+            </div>
+            <ul class="exp-bullets">
+              <li>Maintained and hardened an existing codebase to meet production reliability standards on AWS.</li>
+              <li>Built Python tooling to make large, complex datasets discoverable to scientists and researchers.</li>
+              <li>Contributed to enterprise NLP applications, collaborating on data models and matching algorithm logic.</li>
+            </ul>
           </div>
         </div>
 
@@ -136,261 +183,210 @@
 
   <!-- PROJECTS -->
   <section class="section" id="projects">
-    <div class="container container-wide">
-      <h2 class="section-title">Projects</h2>
+    <div class="container-wide">
+      <p class="section-eyebrow reveal">Work</p>
+      <h2 class="section-heading reveal">Projects</h2>
+      <p class="projects-note reveal">All work done at Oracle — no public repos, but happy to talk through any of it.</p>
 
-      <p class="projects-intro">All work done at Oracle — no public repos, but happy to talk through any of it.</p>
-
-      <div class="projects-category">
-        <h3 class="projects-category-label">AI &amp; ML Systems</h3>
+      <div class="projects-category reveal">
+        <h3 class="category-label">AI &amp; ML Systems</h3>
         <div class="projects-grid">
 
           <div class="project-card">
-            <div class="project-header">
+            <div class="project-card-header">
               <span class="project-name">DIF Agent</span>
               <span class="project-date">Jan 2026 — Present</span>
             </div>
-            <p class="project-desc">
-              The team's first industry-specific AI agent — combines document retrieval from
-              internal knowledge sources with live infrastructure API queries to deliver
-              context-aware self-service support. Architected the full system: context
-              persistence, multi-source selection, workflow orchestration, and REST API
-              contract. Leading a peer engineer through delivery.
-            </p>
+            <p class="project-desc">The team's first industry-specific AI agent — combines document retrieval from internal knowledge sources with live infrastructure API queries to deliver context-aware self-service support. Architected the full system: context persistence, multi-source selection, workflow orchestration, and REST API contract.</p>
             <div class="project-tags">
-              <span class="tag">LangChain</span>
-              <span class="tag">LangGraph</span>
-              <span class="tag">RAG</span>
-              <span class="tag">OCI</span>
-              <span class="tag">REST API</span>
+              <span class="tag">LangChain</span><span class="tag">LangGraph</span><span class="tag">RAG</span><span class="tag">OCI</span><span class="tag">REST API</span>
             </div>
           </div>
 
           <div class="project-card">
-            <div class="project-header">
+            <div class="project-card-header">
               <span class="project-name">AI Reference Application</span>
               <span class="project-date">Mar 2026</span>
             </div>
-            <p class="project-desc">
-              End-to-end reference app demonstrating AI shared service capabilities to internal
-              Oracle customers. Architected a ReAct-style LangGraph agent on AIDP, querying
-              live customer data synced via GoldenGate CDC and enriched with OCI Dataflow
-              segments. Integrated Langfuse for observability. Shipped the full application
-              in one week while leading a junior engineer.
-            </p>
+            <p class="project-desc">End-to-end reference app demonstrating AI shared service capabilities to internal Oracle customers. Architected a ReAct-style LangGraph agent on AIDP, querying live customer data synced via GoldenGate CDC and enriched with OCI Dataflow segments. Integrated Langfuse for observability. Shipped in one week while leading a junior engineer.</p>
             <div class="project-tags">
-              <span class="tag">LangGraph</span>
-              <span class="tag">ReAct</span>
-              <span class="tag">OCI Dataflow</span>
-              <span class="tag">GoldenGate</span>
-              <span class="tag">Langfuse</span>
-              <span class="tag">Python</span>
+              <span class="tag">LangGraph</span><span class="tag">ReAct</span><span class="tag">OCI Dataflow</span><span class="tag">GoldenGate</span><span class="tag">Langfuse</span><span class="tag">Python</span>
             </div>
           </div>
 
           <div class="project-card">
-            <div class="project-header">
+            <div class="project-card-header">
               <span class="project-name">IAT Framework</span>
               <span class="project-date">Jan 2025 — Mar 2025</span>
             </div>
-            <p class="project-desc">
-              Integrated the Jishnu GenAI SDK into an IAT/LangGraph-style workflow, enabling
-              tools to plug in as composable lambda nodes for end-to-end agentic pipelines.
-              Covered retrieval, loading/splitting, and inference (chat, embeddings, vision)
-              with reliable checkpointing and serialization. ~90% test coverage; secured
-              owner approval to merge.
-            </p>
+            <p class="project-desc">Integrated the Jishnu GenAI SDK into an IAT/LangGraph-style workflow, enabling tools to plug in as composable lambda nodes for end-to-end agentic pipelines. Covered retrieval, loading/splitting, and inference (chat, embeddings, vision) with reliable checkpointing. ~90% test coverage.</p>
             <div class="project-tags">
-              <span class="tag">LangGraph</span>
-              <span class="tag">RAG</span>
-              <span class="tag">OpenSearch</span>
-              <span class="tag">Python</span>
-              <span class="tag">GenAI SDK</span>
+              <span class="tag">LangGraph</span><span class="tag">RAG</span><span class="tag">OpenSearch</span><span class="tag">Python</span><span class="tag">GenAI SDK</span>
             </div>
           </div>
 
           <div class="project-card">
-            <div class="project-header">
+            <div class="project-card-header">
               <span class="project-name">RAG Tracing</span>
               <span class="project-date">Oct 2024 — Dec 2024</span>
             </div>
-            <p class="project-desc">
-              Instrumented end-to-end tracing across the full RAG pipeline — retrieval,
-              reranking, embeddings, LLM calls, and orchestration — using
-              OpenTelemetry/OpenInference conventions, exporting into OCI APM. Enabled
-              component-level performance visibility and cut root-cause analysis time
-              significantly.
-            </p>
+            <p class="project-desc">Instrumented end-to-end tracing across the full RAG pipeline — retrieval, reranking, embeddings, LLM calls, and orchestration — using OpenTelemetry/OpenInference conventions, exporting into OCI APM. Enabled component-level performance visibility and cut root-cause analysis time significantly.</p>
             <div class="project-tags">
-              <span class="tag">OpenTelemetry</span>
-              <span class="tag">OpenInference</span>
-              <span class="tag">OCI APM</span>
-              <span class="tag">Observability</span>
+              <span class="tag">OpenTelemetry</span><span class="tag">OpenInference</span><span class="tag">OCI APM</span><span class="tag">Observability</span>
             </div>
           </div>
 
           <div class="project-card">
-            <div class="project-header">
+            <div class="project-card-header">
               <span class="project-name">Code Companion</span>
               <span class="project-date">Nov 2024 — Apr 2025</span>
             </div>
-            <p class="project-desc">
-              Prototype IntelliJ plugin integrating Oracle-hosted LLMs for AI-assisted code
-              generation and developer workflows. Built a Micronaut-based SSE streaming proxy
-              using Reactor to deliver real-time model responses to the IDE. Assisted
-              engineering OAuth2 compliance flows and payload verification.
-            </p>
+            <p class="project-desc">Prototype IntelliJ plugin integrating Oracle-hosted LLMs for AI-assisted code generation and developer workflows. Built a Micronaut-based SSE streaming proxy using Reactor to deliver real-time model responses to the IDE. Assisted engineering OAuth2 compliance flows and payload verification.</p>
             <div class="project-tags">
-              <span class="tag">IntelliJ Platform</span>
-              <span class="tag">Micronaut</span>
-              <span class="tag">Reactor</span>
-              <span class="tag">SSE</span>
-              <span class="tag">OAuth2</span>
+              <span class="tag">IntelliJ Platform</span><span class="tag">Micronaut</span><span class="tag">Reactor</span><span class="tag">SSE</span><span class="tag">OAuth2</span>
             </div>
           </div>
 
         </div>
       </div>
 
-      <div class="projects-category">
-        <h3 class="projects-category-label">Platform &amp; Infrastructure</h3>
+      <div class="projects-category reveal">
+        <h3 class="category-label">Platform &amp; Infrastructure</h3>
         <div class="projects-grid">
 
           <div class="project-card">
-            <div class="project-header">
-              <span class="project-name">Customer Deployment Information (CDI)</span>
+            <div class="project-card-header">
+              <span class="project-name">Customer Deployment Information</span>
               <span class="project-date">Mar 2025 — Jan 2026</span>
             </div>
-            <p class="project-desc">
-              Engineered 3 microservices to ingest and normalize customer records into OCI
-              Object Storage, enabling AI-driven ticketing and documentation workflows and
-              eliminating significant manual operational effort. Led 2 engineers end-to-end
-              across Jira sprint management, hands-on delivery, and production rollout across
-              7 environments. Coordinated across 5 teams and 3 stakeholders.
-            </p>
+            <p class="project-desc">Engineered multiple microservices to ingest and normalize customer records into OCI Object Storage, enabling AI-driven ticketing and documentation workflows. Led 2 engineers end-to-end across sprint management, hands-on delivery, and production rollout across 7 environments.</p>
             <div class="project-tags">
-              <span class="tag">Java</span>
-              <span class="tag">Micronaut</span>
-              <span class="tag">Kubernetes</span>
-              <span class="tag">OCI</span>
-              <span class="tag">CI/CD</span>
+              <span class="tag">Java</span><span class="tag">Micronaut</span><span class="tag">Kubernetes</span><span class="tag">OCI</span><span class="tag">CI/CD</span>
             </div>
           </div>
 
           <div class="project-card">
-            <div class="project-header">
+            <div class="project-card-header">
               <span class="project-name">OCIR Provisioner</span>
               <span class="project-date">Oct 2022 — Dec 2022</span>
             </div>
-            <p class="project-desc">
-              GitLab CI/CD pipeline using shell scripting, Kubernetes Jobs, and Docker to
-              automate OCI resource provisioning across dev, QA, integration, and production
-              — cutting manual setup time by 80%. Enabled full regression deployments across
-              all environments and integrated Prometheus and Grafana for real-time telemetry
-              across 10+ services.
-            </p>
+            <p class="project-desc">GitLab CI/CD pipeline using shell scripting, Kubernetes Jobs, and Docker to automate OCI resource provisioning across dev, QA, integration, and production — cutting manual setup time by 80%. Integrated Prometheus and Grafana for real-time telemetry.</p>
             <div class="project-tags">
-              <span class="tag">GitLab CI/CD</span>
-              <span class="tag">Bash</span>
-              <span class="tag">Kubernetes</span>
-              <span class="tag">Docker</span>
-              <span class="tag">Prometheus</span>
+              <span class="tag">GitLab CI/CD</span><span class="tag">Bash</span><span class="tag">Kubernetes</span><span class="tag">Docker</span><span class="tag">Prometheus</span>
             </div>
           </div>
 
           <div class="project-card">
-            <div class="project-header">
+            <div class="project-card-header">
               <span class="project-name">Logging Library</span>
               <span class="project-date">Mar 2023 — May 2023</span>
             </div>
-            <p class="project-desc">
-              Drop-in library enforcing OCI Logging-compliant log schema across 10+
-              microservices, enabling seamless metadata parsing and ingestion into Oracle's
-              central logging system. Cut mean time to detection by 60% and accelerated
-              incident resolution by 40% through enriched, structured logs.
-            </p>
+            <p class="project-desc">Drop-in library enforcing OCI Logging-compliant log schema across microservices, enabling seamless metadata parsing and ingestion into Oracle's central logging system. Cut mean time to detection by 60% and accelerated incident resolution by 40% through enriched, structured logs.</p>
             <div class="project-tags">
-              <span class="tag">SLF4J</span>
-              <span class="tag">MDC</span>
-              <span class="tag">OCI Logging</span>
-              <span class="tag">Observability</span>
+              <span class="tag">SLF4J</span><span class="tag">MDC</span><span class="tag">OCI Logging</span><span class="tag">Observability</span>
             </div>
           </div>
 
           <div class="project-card">
-            <div class="project-header">
+            <div class="project-card-header">
               <span class="project-name">OCI Ingress Pattern</span>
               <span class="project-date">Dec 2022 — Mar 2023</span>
             </div>
-            <p class="project-desc">
-              Designed and rolled out a unified ingress architecture using OCI API Gateway,
-              Load Balancers, and NGINX serving 10+ internal and external services.
-              Centralized routing and configuration, enforced TLS policies, and automated
-              certificate rotation — improving compliance posture across the stack.
-            </p>
+            <p class="project-desc">Designed and rolled out a unified ingress architecture using OCI API Gateway, Load Balancers, and NGINX serving internal and external services. Centralized routing, enforced TLS policies, and automated certificate rotation.</p>
             <div class="project-tags">
-              <span class="tag">OCI</span>
-              <span class="tag">API Gateway</span>
-              <span class="tag">NGINX</span>
-              <span class="tag">TLS</span>
+              <span class="tag">OCI</span><span class="tag">API Gateway</span><span class="tag">NGINX</span><span class="tag">TLS</span>
             </div>
           </div>
 
         </div>
       </div>
-
     </div>
   </section>
 
   <!-- SKILLS -->
   <section class="section section-alt" id="skills">
-    <div class="container">
-      <h2 class="section-title">Skills</h2>
+    <div class="container-wide">
+      <p class="section-eyebrow reveal">Expertise</p>
+      <h2 class="section-heading reveal">Skills</h2>
       <div class="skills-grid">
 
-        <div class="skill-group">
-          <h3 class="skill-group-title">AI &amp; ML</h3>
-          <ul class="skill-list">
-            <li>LangChain / LangGraph</li>
-            <li>Agentic Systems</li>
-            <li>RAG Pipelines</li>
-            <li>LLM Orchestration</li>
-            <li>OpenTelemetry / OpenInference</li>
-            <li>Langfuse</li>
-          </ul>
+        <div class="skill-card reveal">
+          <div class="skill-card-header">
+            <div class="skill-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+            </div>
+            <h3 class="skill-card-title">AI &amp; ML</h3>
+          </div>
+          <div class="skill-chips">
+            <span class="chip">LangChain</span>
+            <span class="chip">LangGraph</span>
+            <span class="chip">RAG Pipelines</span>
+            <span class="chip">Agentic Systems</span>
+            <span class="chip">LLM Orchestration</span>
+            <span class="chip">OpenTelemetry</span>
+            <span class="chip">OpenInference</span>
+            <span class="chip">Langfuse</span>
+          </div>
         </div>
 
-        <div class="skill-group">
-          <h3 class="skill-group-title">Languages</h3>
-          <ul class="skill-list">
-            <li>Java</li>
-            <li>Python</li>
-            <li>Go</li>
-            <li>Bash</li>
-            <li>SQL</li>
-          </ul>
+        <div class="skill-card reveal">
+          <div class="skill-card-header">
+            <div class="skill-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <h3 class="skill-card-title">Languages</h3>
+          </div>
+          <div class="skill-chips">
+            <span class="chip">Java</span>
+            <span class="chip">Python</span>
+            <span class="chip">Go</span>
+            <span class="chip">Bash</span>
+            <span class="chip">SQL</span>
+          </div>
         </div>
 
-        <div class="skill-group">
-          <h3 class="skill-group-title">Cloud &amp; Infrastructure</h3>
-          <ul class="skill-list">
-            <li>OCI · AWS</li>
-            <li>Kubernetes · Docker · Rancher</li>
-            <li>GitLab CI/CD</li>
-            <li>Prometheus · Grafana · OCI APM</li>
-            <li>Ansible · Serverless</li>
-          </ul>
+        <div class="skill-card reveal">
+          <div class="skill-card-header">
+            <div class="skill-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <h3 class="skill-card-title">Cloud &amp; Infrastructure</h3>
+          </div>
+          <div class="skill-chips">
+            <span class="chip">OCI</span>
+            <span class="chip">AWS</span>
+            <span class="chip">Kubernetes</span>
+            <span class="chip">Docker</span>
+            <span class="chip">Rancher</span>
+            <span class="chip">GitLab CI/CD</span>
+            <span class="chip">Prometheus</span>
+            <span class="chip">Grafana</span>
+            <span class="chip">OCI APM</span>
+            <span class="chip">Ansible</span>
+            <span class="chip">Serverless</span>
+          </div>
         </div>
 
-        <div class="skill-group">
-          <h3 class="skill-group-title">Frameworks &amp; Backend</h3>
-          <ul class="skill-list">
-            <li>Micronaut · Spring Boot · Helidon</li>
-            <li>Reactor · RxJava</li>
-            <li>REST APIs · SSE Streaming</li>
-            <li>OAuth2 / SSO</li>
-            <li>PostgreSQL · OpenSearch · Oracle DB</li>
-          </ul>
+        <div class="skill-card reveal">
+          <div class="skill-card-header">
+            <div class="skill-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            </div>
+            <h3 class="skill-card-title">Frameworks &amp; Backend</h3>
+          </div>
+          <div class="skill-chips">
+            <span class="chip">Micronaut</span>
+            <span class="chip">Spring Boot</span>
+            <span class="chip">Helidon</span>
+            <span class="chip">Reactor</span>
+            <span class="chip">RxJava</span>
+            <span class="chip">REST APIs</span>
+            <span class="chip">SSE Streaming</span>
+            <span class="chip">OAuth2 / SSO</span>
+            <span class="chip">PostgreSQL</span>
+            <span class="chip">OpenSearch</span>
+            <span class="chip">Oracle DB</span>
+          </div>
         </div>
 
       </div>
@@ -399,16 +395,29 @@
 
   <!-- CONTACT -->
   <section class="section" id="contact">
-    <div class="container container-narrow">
-      <h2 class="section-title">Contact</h2>
-      <p class="contact-intro">
-        Open to interesting conversations — job opportunities, collaborations, or just
-        talking shop about AI systems and distributed infrastructure.
-      </p>
-      <a href="#" class="btn btn-primary btn-large" id="contact-btn">Say hello →</a>
-      <div class="social-row">
-        <a href="https://www.linkedin.com/in/benjamin-pasternak/" target="_blank" rel="noopener">LinkedIn</a>
+    <div class="container-narrow">
+      <p class="section-eyebrow reveal" style="text-align:center">Get In Touch</p>
+      <h2 class="section-heading reveal" style="text-align:center">Let's Connect</h2>
+      <p class="contact-sub reveal">Open to AI engineering, cloud, and backend roles — or just talking shop.</p>
+
+      <div class="email-card reveal">
+        <div class="email-card-left">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="email-icon"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          <span class="email-text" id="email-display"></span>
+        </div>
+        <div class="copy-btn-wrap">
+          <button class="copy-btn" id="copy-btn" title="Copy email">
+            <svg class="icon-copy" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <svg class="icon-check" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><polyline points="20 6 9 17 4 12"/></svg>
+          </button>
+          <div class="copy-tooltip" id="copy-tooltip">Copied!</div>
+        </div>
       </div>
+
+      <a href="https://www.linkedin.com/in/benjamin-pasternak/" target="_blank" rel="noopener" class="linkedin-btn reveal">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        Connect on LinkedIn
+      </a>
     </div>
   </section>
 
